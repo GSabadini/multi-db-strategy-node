@@ -19,14 +19,14 @@ before_install:
   - docker ps
   - docker/web/provision.sh
 
+before_script:
+  - docker-compose up -d
+
 node_js:
   - "8"
 
 services:
   - docker
-
-after_install:
-  - docker-compose up -d
 
 cache:
   directories:
