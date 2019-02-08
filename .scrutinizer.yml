@@ -5,4 +5,4 @@ build:
         override:
           - command: npm run coveralls
             coverage:
-              file: coverage
+              file: ./coverage
