@@ -1,20 +1,19 @@
-const ICrud = require('./../interface/interfaceCrud')
-const Sequelize = require('sequelize')
+const Sequelize = require('sequelize');
+const ICrud = require('./../interface/interfaceCrud');
 
 class Postgres extends ICrud {
   constructor(connection, schema) {
-    super()
-    this._connection = connection
-    this._schema = schema
+    super();
+    this._connection = connection;
+    this._schema = schema;
   }
 
   async isConnected() {
     try {
-      await this._connection.authenticate()
-      return true
+      await this._connection.authenticate();
+      return true;
     } catch (error) {
-      console.log('fail', error)
-      return false
+      return false;
     }
   }
 
@@ -22,11 +21,11 @@ class Postgres extends ICrud {
     const model = connection.define(
       schema.name,
       schema.schema,
-      schema.options
-    )
-    await model.sync()
+      schema.options,
+    );
+    await model.sync();
 
-    return model
+    return model;
   }
 
   static connect() {
@@ -38,44 +37,43 @@ class Postgres extends ICrud {
         dialect: 'postgres',
         quoteIdentifiers: false,
         operatorsAliases: false,
-        logging: false
-      }
-    )
-    return connection
+        logging: false,
+      },
+    );
+    return connection;
   }
 
   async create(item) {
     const {
-      dataValues
-    } = await this._schema.create(item)
+      dataValues,
+    } = await this._schema.create(item);
 
-    return dataValues
+    return dataValues;
   }
 
   async read(value = {}) {
     return await this._schema.findAll({
       where: value,
-      raw: true
-    })
+      raw: true,
+    });
   }
 
   async update(id, item) {
     return await this._schema.update(item, {
       where: {
-        id: id
-      }
-    })
+        id,
+      },
+    });
   }
 
   async delete(id) {
     const query = id ? {
-      id
-    } : {}
+      id,
+    } : {};
     return await this._schema.destroy({
-      where: query
-    })
+      where: query,
+    });
   }
-
 }
 
-module.exports = Postgres
+module.exports = Postgres;

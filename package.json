@@ -4,7 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "nyc mocha src/tests/*.js"
+    "test": "mocha src/tests/*.js",
+    "test:coverage": "nyc npm test",
+    "coveralls": "npm run test:coverage && nyc report --reporter=text-lcov | coveralls",
+    "lint": "./node_modules/.bin/eslint --fix src/*.js"
+  },
+  "nyc": {
+    "reporter": [
+      "text",
+      "html"
+    ],
+    "exclude": [
+      "tests/**"
+    ]
   },
   "keywords": [],
   "author": "Gabriel S Facina <gabriels.facina@gmail.com>",
@@ -16,6 +28,9 @@
     "sequelize": "^4.42.0"
   },
   "devDependencies": {
+    "eslint": "^5.13.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
     "mocha": "^5.2.0",
     "nyc": "^13.2.0"
   }

@@ -1,29 +1,29 @@
-const NotImplementedException = require('./../exception/notImplementedException')
+const NotImplementedException = require('./../exception/notImplementedException');
 
 class ICrud {
   create(item) {
-    throw new NotImplementedException()
+    throw new NotImplementedException();
   }
 
   read(query) {
-    throw new NotImplementedException()
+    throw new NotImplementedException();
   }
 
   update(id, item) {
-    throw new NotImplementedException()
+    throw new NotImplementedException();
   }
 
   delete(id) {
-    throw new NotImplementedException()
+    throw new NotImplementedException();
   }
 
   isConnected() {
-    throw new NotImplementedException()
+    throw new NotImplementedException();
   }
 
   connect() {
-    throw new NotImplementedException()
+    throw new NotImplementedException();
   }
 }
 
-module.exports = ICrud
+module.exports = ICrud;

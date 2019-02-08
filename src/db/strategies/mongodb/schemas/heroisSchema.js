@@ -1,18 +1,18 @@
-const Mongoose = require('mongoose')
+const Mongoose = require('mongoose');
 
 const heroiSchema = new Mongoose.Schema({
   nome: {
     type: String,
-    required: true
+    required: true,
   },
   poder: {
     type: String,
-    required: true
+    required: true,
   },
   insertedAt: {
     type: Date,
-    default: new Date()
+    default: new Date(),
   },
 });
 
-module.exports = Mongoose.model('heroi', heroiSchema)
+module.exports = Mongoose.model('heroi', heroiSchema);
