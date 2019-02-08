@@ -13,14 +13,14 @@ docker run \
 ## MONGOCLIENT
 
 ```
-sudo docker run \
+docker run \
   --name mongoclient \
   -p 3000:3000 \
   --link mongodb:mongodb \
   -d \
   mongoclient/mongoclient```
 
-```docker exec -it mongodb \
+docker exec -it mongodb \
   mongo --host localhost -u admin root -p root --authenticationDatabase root \
   --eval "db.getSiblingDB('herois').createUser({user: 'admin', pwd: 'admin', roles: [{role: 'readWrite', db: 'herois'}]})"
   ```
@@ -35,10 +35,9 @@ docker run \
     -e POSTGRES_DB=heroes \
     -p 5432:5432 \
     -d \
-    postgres
-    ```
+    postgres 
 
-```docker run \
+docker run \
     --name adminer \
     -p 8080:8080 \
     --link postgres:postgres \
