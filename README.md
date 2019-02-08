@@ -40,7 +40,7 @@ docker run \
     -d \
     postgres 
 
-## ADMINER POSTGRES
+## ADMINER 
 
 docker run \
     --name adminer \
