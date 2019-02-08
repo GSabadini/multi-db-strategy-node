@@ -1,3 +1,5 @@
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/GSabadini/multi-db-strategy-node/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/GSabadini/multi-db-strategy-node/?branch=master) [![Build Status](https://scrutinizer-ci.com/g/GSabadini/multi-db-strategy-node/badges/build.png?b=master)](https://scrutinizer-ci.com/g/GSabadini/multi-db-strategy-node/build-status/master)
+
 ## MONGODB
 
 ```
