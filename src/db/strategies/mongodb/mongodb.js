@@ -50,10 +50,6 @@ class MongoDB extends ICrud {
     return STATUS[readyState]
   }
 
-  defineModel() {
-
-  }
-
   static connect() {
     Mongoose.connect('mongodb://root:root@localhost:27017/admin', {
       useNewUrlParser: true
