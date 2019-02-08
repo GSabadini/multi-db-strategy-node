@@ -1,9 +1,0 @@
-build:
-  nodes:
-    coverage:
-      tests:
-        override:
-          - command: npm run coveralls
-            coverage:
-              file: ./coverage
-              format: clover
