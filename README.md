@@ -18,7 +18,7 @@ docker run \
   -p 3000:3000 \
   --link mongodb:mongodb \
   -d \
-  mongoclient/mongoclient```
+  mongoclient/mongoclient
 
 docker exec -it mongodb \
   mongo --host localhost -u admin root -p root --authenticationDatabase root \
@@ -45,7 +45,7 @@ docker run \
     adminer
  ```
 
-## NEO4J
+## NEO4J ( Not implemented )
 
 ```
 docker run \
