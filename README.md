@@ -13,11 +13,9 @@ docker run \
   -e MONGO_INITDB_DATABASE=heroes \
   -d \
   mongo
-  ```
 
 ## MONGOCLIENT
 
-```
 docker run \
   --name mongoclient \
   -p 3000:3000 \
