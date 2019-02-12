@@ -18,6 +18,7 @@ const MOCK_HEROI_ATUALIZAR = {
 let MOCK_HEROI_ID = '';
 
 describe('MongoDB Strategy', function () {
+  this.timeout(Infinity);
   this.beforeAll(async () => {
     const connection = MongoDB.connect();
     context = new Context(new MongoDB(connection, HeroiSchema));
