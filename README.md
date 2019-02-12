@@ -2,7 +2,7 @@
 
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/GSabadini/multi-db-strategy-node/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/GSabadini/multi-db-strategy-node/?branch=master) [![Build Status](https://scrutinizer-ci.com/g/GSabadini/multi-db-strategy-node/badges/build.png?b=master)](https://scrutinizer-ci.com/g/GSabadini/multi-db-strategy-node/build-status/master)
 
-## MONGODB
+## MongoDB
 
 ```
 docker run \
@@ -28,7 +28,7 @@ docker exec -it mongodb \
   --eval "db.getSiblingDB('heroes').createUser({user: 'admin', pwd: 'admin', roles: [{role: 'readWrite', db: 'heroes'}]})"
   ```
 
-## POSTGRES
+## Postgres
 
 ```
 docker run \
@@ -50,7 +50,7 @@ docker run \
     adminer
  ```
 
-## NEO4J ( Not implemented )
+## Neo4j ( Not implemented )
 
 ```
 docker run \
@@ -61,7 +61,7 @@ docker run \
     neo4j 
 ```
 
-## DOCKER-COMPOSE
+## Docker-compose
 
 ```
 docker-compose up -d
